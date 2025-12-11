@@ -1,18 +1,19 @@
-// Должно быть ТОЧНО так:
+// Инициализация EmailJS
 (function() {
     emailjs.init("aZHRiHj46zYYgMIVz");
 })();
 
+// Обработка формы
 document.getElementById('feedbackForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
-    // Показываем "Отправка..."
     const formMessage = document.getElementById('formMessage');
     formMessage.innerHTML = '<p>Отправка...</p>';
     
-    emailjs.sendForm('service_jxizz17', 'template_64ngy3s', this)
+    // ИСПРАВЛЕННАЯ СТРОКА ↓
+    emailjs.sendForm('service_jxizzf7', 'template_64ngy3s', this)
         .then(function() {
-            formMessage.innerHTML = '<p style="color:green">✅ Отправлено!</p>';
+            formMessage.innerHTML = '<p style="color:green">✅ Сообщение отправлено!</p>';
             document.getElementById('feedbackForm').reset();
         }, function(error) {
             formMessage.innerHTML = '<p style="color:red">❌ Ошибка: ' + error.text + '</p>';
