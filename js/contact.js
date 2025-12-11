@@ -3,15 +3,17 @@
     emailjs.init("aZHRiHj46zYYgMIVz");
 })();
 
+// Обработка формы
 document.getElementById('feedbackForm').addEventListener('submit', function(event) {
     event.preventDefault();
+    
     const formMessage = document.getElementById('formMessage');
     formMessage.innerHTML = '<p>Отправка...</p>';
     
-    // ПРАВИЛЬНЫЙ ID с буквой f
+    // ВАЖНО: должно быть service_jxizzf7 (как в вашем EmailJS)
     emailjs.sendForm('service_jxizzf7', 'template_64ngy3s', this)
         .then(function() {
-            formMessage.innerHTML = '<p style="color:green">✅ Отправлено!</p>';
+            formMessage.innerHTML = '<p style="color:green">✅ Сообщение отправлено!</p>';
             document.getElementById('feedbackForm').reset();
         }, function(error) {
             formMessage.innerHTML = '<p style="color:red">❌ Ошибка: ' + error.text + '</p>';
