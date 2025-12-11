@@ -10,7 +10,7 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
     const formMessage = document.getElementById('formMessage');
     formMessage.innerHTML = '<p>Отправка...</p>';
     
-    // ИСПРАВЛЕННАЯ СТРОКА ↓
+    // ВАЖНО: должно быть service_jxizzf7 с буквой f
     emailjs.sendForm('service_jxizzf7', 'template_64ngy3s', this)
         .then(function() {
             formMessage.innerHTML = '<p style="color:green">✅ Сообщение отправлено!</p>';
