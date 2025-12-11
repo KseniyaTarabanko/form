@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мain page</title>
+    <link rel="stylesheet" href="css/css.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/zoomove.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/zoomove.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+			<a href="index.html" class="logo-img" ></a>
+            <span>Secrets of Time</span>
+        </div>
+        <input type="text" class="search" placeholder="Поиск">
+        <nav class="menu">
+            <a href="#">Контакты</a>
+            <a href="index2.html">Каталог</a>
+            <a href="index3.html">Корзина</a>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="info-block">
+            <h1>Интернет-магазин винтажных украшений</h1>
+            <p>Откройте для себя мир винтажной моды</p>
+            <button class="animated-button" id="catalogButton">Перейти в каталог</button>
+        </section>
+        <figure class="mascot">
+            <img src="img/mascot.glavnay.svg" alt="Маскот магазина">
+        </figure>
+    </main>
+    <section class="products">
+    <h2>Наши украшения</h2>
+    <div class="product-grid">
+    <img class="product-img1 zoom" src="img/product1.svg" alt="Украшение 1">
+    <img class="product-img2 zoom" src="img/product2.svg" alt="Украшение 2">
+    <img class="product-img3 zoom" src="img/product3.svg" alt="Украшение 3">
+    <img class="product-img4 zoom" src="img/product4.svg" alt="Украшение 4">
+    <img class="product-img5 zoom" src="img/product5.svg" alt="Украшение 5">
+</div>
+</section>
+    <section class="about">
+        <h2>О нас</h2>
+            <p>Мы гордимся тем, что предлагаем нашим клиентам только лучшее. Наша команда состоит 
+			из профессионалов, которые любят винтажные украшения и знают о них всё.  Мы постоянно обновляем наш ассортимент и предоставляем качественный сервис.</p>
+            <p>Наши украшения станут прекрасным подарком 
+			для себя или близких. Они подойдут для любого 
+			случая и подчеркнут вашу индивидуальность. 
+			Мы рады видеть вас среди наших клиентов 
+			и надеемся, что вы найдёте здесь именно то, 
+			что искали!</p>
+    </section>
+	<section class="komanda">
+    <h2>Наша команда</h2>
+    <p>Наши мастера — это высококвалифицированные специалисты, которые обладают большим опытом и знаниями в своей области. Они постоянно совершенствуют свои навыки.</p>
+    <div class="sotrudniki">
+        <div class="sotrudnik">
+            <img src="img/sotrydnik1.svg" alt="Сотрудник 1">
+            <div class="sotrydnik-info">
+                <span>Старший мастер: Валерия Усс</span>
+				<br>
+                <span>Опыт работы: 15 лет</span>
+            </div>
+        </div>
+        <div class="sotrudnik">
+            <img src="img/sotrydnik2.svg" alt="Сотрудник 2">
+            <div class="sotrydnik-info">
+                <span>Мастер: Елена Соловьева</span>
+				<br>
+                <span>Опыт работы: 7 лет</span>
+            </div>
+        </div>
+        <div class="sotrudnik">
+            <img src="img/sotrydnik3.svg" alt="Сотрудник 3">
+            <div class="sotrydnik-info">
+                <span>Мастер: Новиков Анатолий</span>
+				<br>
+                <span>Опыт работы: 5 лет</span>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="index.html" class="logo-img"></a>
+            <p>Интернет-магазин винтажных украшений</p>
+            <p>&#169; 2022-2024 Secrets of Time</p>
+        </div>
+        <div class="contacts">
+            <h5>КОНТАКТЫ</h5>
+			<p>Тарабанько Ксения</p>
+            <p>+7(911)238-33-31</p>
+            <p>Secretsoftime@gmail.com</p>
+        </div>
+		<div class="ikonki">
+            <a href="https://web.telegram.org/a/" class="telegram"></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="mail"></a>
+        </div>
+        <div class="dostavka">
+            <h5>ДОСТАВКА</h5>
+			<p>От 7 дней по всей Росии</p>
+            <a href="index3.html">КОРЗИНА</a>
+        </div>
+    </footer>
+    <script>
+		$(document).ready(function() {
+        $('.zoom').zoomove();
+		});
+	    const button = document.getElementById('catalogButton');
+	    button.addEventListener('click', function() {
+			window.location.href = 'index2.html';
+	    });
+	</script>
+    <!-- ФОРМА ОБРАТНОЙ СВЯЗИ -->
+<section style="padding:40px; background:#f9f3e9;">
+  <h2 style="text-align:center">Обратная связь</h2>
+  <form id="feedbackForm" style="max-width:500px; margin:0 auto;">
+    <div style="margin-bottom:15px">
+      <label>Имя *</label>
+      <input type="text" name="user_name" required style="width:100%; padding:10px">
+    </div>
+    <div style="margin-bottom:15px">
+      <label>Email *</label>
+      <input type="email" name="user_email" required style="width:100%; padding:10px">
+    </div>
+    <div style="margin-bottom:15px">
+      <label>Сообщение *</label>
+      <textarea name="message" required style="width:100%; padding:10px; height:150px"></textarea>
+    </div>
+    <button type="submit" style="padding:12px 30px; background:#8b4513; color:white; border:none">
+      Отправить
+    </button>
+  </form>
+  <div id="formMessage" style="text-align:center; margin-top:15px"></div>
+</section>
+
+<!-- ПОДКЛЮЧЕНИЕ БИБЛИОТЕК -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
+
